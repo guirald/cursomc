@@ -22,7 +22,7 @@ public class PedidoResource {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 
-		Optional<Pedido> pedido = Optional.ofNullable(pedidoService.buscar(id));
+		Optional<Pedido> pedido = Optional.ofNullable(pedidoService.find(id));
 		return ResponseEntity.ok().body(pedido);
 	}
 }
