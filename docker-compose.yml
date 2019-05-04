@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql_dev:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_DATABASE=spring
+      - MYSQL_USER=spring
+      - MYSQL_PASSWORD=spring
+    expose:
+      - '3306'
+    ports:
+      - '3306:3306'
